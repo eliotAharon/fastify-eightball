@@ -4,7 +4,7 @@ const eightBallBrain = require('../lib/eightBallBrain')
 // get all post
 exports.getAllAnswers = async (req, reply) => {
   try {
-    return eightBallBrain.getAllAnswers
+    return await eightBallBrain.getAllAnswers()
   } catch (err) {
     throw boom.boomify(err)
   }
